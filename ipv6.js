@@ -39,7 +39,12 @@ function getIpv4MappedIpv6Address(ipv4) {
       }
     }
   }
-  return ipv6Address;
+
+  const resultObj={
+    ipv4:ipv4,
+    ipv6:ipv6Address
+    }
+  return `IPv4 ${resultObj.ipv4} mapped to IPv6 Address: ${resultObj.ipv6}`
 }
 
 module.exports.getIpv4MappedIpv6Address = getIpv4MappedIpv6Address;
